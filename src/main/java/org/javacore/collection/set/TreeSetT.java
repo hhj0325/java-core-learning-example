@@ -1,6 +1,5 @@
 package org.javacore.collection.set;
 
-import java.util.Iterator;
 import java.util.TreeSet;
 /*
  * Copyright [2015] [Jeff Lee]
@@ -8,9 +7,9 @@ import java.util.TreeSet;
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- * 
+ *
  *   http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -29,30 +28,26 @@ public class TreeSetT{
 		bSet.add(new Bird(1));
 		bSet.add(new Bird(3));
 		bSet.add(new Bird(2));
-		
-		// 注意排序
-		Iterator<Bird> iter = bSet.iterator();
-		while (iter.hasNext()){
-			Bird bird = (Bird) iter.next();
-			System.out.println(bird);
-		}
+
+        System.out.println(bSet);
 	}
 }
 /**
  * Bird对象 实现了Comparable接口
  */
 class Bird implements Comparable<Bird>{
-	int size;
-	public Bird(int s){
-		size = s;
+	int num;
+	public Bird(int num){
+        this.num = num;
 	}
-	
-	public String toString(){
-		return size + "号鸟";
+
+	@Override
+    public String toString(){
+		return num + "号鸟";
 	}
 
 	@Override
 	public int compareTo(Bird o){
-		return size - o.size;
+		return num - o.num;
 	}
 }

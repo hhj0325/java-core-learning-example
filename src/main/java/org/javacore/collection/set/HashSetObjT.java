@@ -7,9 +7,9 @@ import java.util.HashSet;
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- * 
+ *
  *   http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -32,28 +32,31 @@ public class HashSetObjT{
 		objs.add(new A());
 		objs.add(new B());
 		objs.add(new C());
-		System.out.println("HashSet Elements:");
-		System.out.print("\t" + objs + "\n");
+		System.out.println("HashSet Elements:"  + objs + "| size: " + objs.size());
 	}
 }
 class A {
-	public boolean equals(Object obj){
+	@Override
+    public boolean equals(Object obj){
 		return true;
 	}
 }
 
 class B {
-	public int hashCode(){
+	@Override
+    public int hashCode(){
 		return 1;
 	}
 }
 
 class C {
-	public int hashCode(){
+	@Override
+    public int hashCode(){
 		return 2;
 	}
 
-	public boolean equals(Object obj){
+	@Override
+    public boolean equals(Object obj){
 		return true;
 	}
 }
