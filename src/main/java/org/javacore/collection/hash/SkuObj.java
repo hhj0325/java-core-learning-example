@@ -44,4 +44,14 @@ public class SkuObj {
     public void setDesc(String desc) {
         this.desc = desc;
     }
+
+    @Override
+    public String toString() {
+        return "SkuObj{" +
+            "id=" + id +
+            ", name='" + name + '\'' +
+            ", age=" + age +
+            ", desc='" + desc + '\'' +
+            "}\n";
+    }
 }

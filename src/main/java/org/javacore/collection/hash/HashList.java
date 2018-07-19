@@ -1,6 +1,7 @@
 package org.javacore.collection.hash;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -20,7 +21,7 @@ public class HashList {
             reqSkuObjList.add(skuObj);
         }
 
-        for (int i = 0 ; i < 5000; i++) {
+        for (int i = 0 ; i < 10; i++) {
             SkuObj skuObj = new SkuObj();
             skuObj.setId(i);
             skuObj.setName("nameexist" + i);
@@ -28,6 +29,8 @@ public class HashList {
             skuObj.setDesc("descexist" + i);
             existSkuObjList.add(skuObj);
         }
+
+        System.out.println(Arrays.toString(existSkuObjList.toArray()));
 
 
 

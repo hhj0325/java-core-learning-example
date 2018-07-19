@@ -9,9 +9,9 @@ import java.util.List;
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- * 
+ *
  *   http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -25,11 +25,11 @@ import java.util.List;
  * 	ArrayList的使用
  */
 public class ArrayListT{
-	
+
 	public static void main(String[] args){
 		listMethods();
 	}
-	
+
 	/**
 	 * 测试ArrayList基本操作方法，其角标的使用及迭代器next()的使用。
 	 */
@@ -45,10 +45,11 @@ public class ArrayListT{
 		a1.remove(2);
 		System.out.print("指定角标2删除：\n\t"+a1+"\n");
 		System.out.print("指定角标2查询：\n\t"+a1.get(2)+"\n");
-		
+
 		Iterator i1 = a1.iterator();
 		System.out.println("用迭代器查询全部元素：");
-		while (i1.hasNext())
-			System.out.print(i1.next()+"\t");
+		while (i1.hasNext()) {
+            System.out.print(i1.next() + "\t");
+        }
 	}
 }

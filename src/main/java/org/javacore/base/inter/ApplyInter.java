@@ -44,7 +44,7 @@ class UpcaseImpl implements ProcessorInter {
 class SplitcaseImpl implements ProcessorInter {
     @Override
     public String name() {
-        return this.getClass().getSimpleName();
+        return this.getClass().getCanonicalName();
     }
 
     @Override
