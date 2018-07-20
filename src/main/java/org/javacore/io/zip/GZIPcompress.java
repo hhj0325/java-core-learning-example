@@ -1,13 +1,6 @@
 package org.javacore.io.zip;
 
-import java.io.BufferedOutputStream;
-import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.util.zip.GZIPInputStream;
 import java.util.zip.GZIPOutputStream;
 
@@ -42,19 +35,22 @@ public class GZIPcompress {
                 new GZIPOutputStream(new FileOutputStream("data.gz")));
         System.out.println("Writing File 压缩");
         int c;
-        while ((c = in.read()) > 0)
-            out.write(String.valueOf((char)c).getBytes("UTF-8"));
+        while ((c = in.read()) > 0) {
+            out.write(String.valueOf((char) c).getBytes("UTF-8"));
+        }
         in.close();
         out.close();
 
         System.out.println("Reading File 解压");
         // 用输入解压流读取文件
+        // encoding question
         BufferedReader in2 = new BufferedReader(
                 new InputStreamReader(
-                        new GZIPInputStream(new FileInputStream("data.gz")),"UTF-8"));// encoding question
+                        new GZIPInputStream(new FileInputStream("data.gz")),"UTF-8"));
         String s;
-        while ((s=in2.readLine()) != null)
+        while ((s=in2.readLine()) != null) {
             System.out.println(s);
+        }
         in2.close();
     }
 }
