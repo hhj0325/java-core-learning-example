@@ -22,8 +22,9 @@ public class FormatteMemoryInput {
 					// 缓冲区字节输入
 					new ByteArrayInputStream(
 							BufferedInputFileT.read(filePath).getBytes()));
-			while(true)
-				System.out.println((char)in.readByte());
+			while(true) {
+                System.out.println((char) in.readByte());
+            }
 		} catch (EOFException e) {
 			System.out.println("End of Stream");
 		}
