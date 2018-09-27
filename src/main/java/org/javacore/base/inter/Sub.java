@@ -18,6 +18,14 @@ public class Sub extends Supper {
         this.man = man;
     }
 
+    private class SubInner{
+
+        boolean retRMan(){
+            return !man;
+        }
+
+    }
+
     public static void main(String[] args) {
         Sub sub = new Sub();
         sub.nullRetAge();
